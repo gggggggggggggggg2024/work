@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystique Entertainment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white p-6">
+
+    <!-- Header Section -->
+    <header class="text-center py-12 fade-in">
+        <h1 class="text-5xl font-bold tracking-wide">MYSTIQUE ENTERTAINMENT</h1>
+        <p class="mt-4 text-lg text-gray-300">Bringing the extraordinary to life.</p>
+    </header>
+
+    <!-- Services Section -->
+    <section class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        <!-- Service Cards -->
+        <div class="bg-gray-900 shadow-lg p-6 text-center rounded-lg card">
+            <h2 class="text-2xl font-semibold">🎤 Event Hosting</h2>
+            <p class="mt-2 text-gray-400">We organize and host top-tier events tailored to your needs.</p>
+        </div>
+
+        <div class="bg-gray-900 shadow-lg p-6 text-center rounded-lg card">
+            <h2 class="text-2xl font-semibold">🏠 Room Booking & AirBnB</h2>
+            <p class="mt-2 text-gray-400">Luxury accommodations for short and long stays.</p>
+        </div>
+
+        <div class="bg-gray-900 shadow-lg p-6 text-center rounded-lg card">
+            <h2 class="text-2xl font-semibold">👕 Clothing Store</h2>
+            <p class="mt-2 text-gray-400">Explore a unique collection of stylish and trendy fashion.</p>
+        </div>
+
+        <div class="bg-gray-900 shadow-lg p-6 text-center rounded-lg card">
+            <h2 class="text-2xl font-semibold">🎧 DJ Hiring</h2>
+            <p class="mt-2 text-gray-400">Professional DJs to make your events unforgettable.</p>
+        </div>
+
+        <div class="bg-gray-900 shadow-lg p-6 text-center rounded-lg card">
+            <h2 class="text-2xl font-semibold">📢 Digital Marketing</h2>
+            <p class="mt-2 text-gray-400">Boost your brand with expert marketing strategies.</p>
+        </div>
+
+        <div class="bg-gray-900 shadow-lg p-6 text-center rounded-lg card">
+            <h2 class="text-2xl font-semibold">📸 Photography & Videography</h2>
+            <p class="mt-2 text-gray-400">Capture and create stunning visuals for every occasion.</p>
+        </div>
+
+    </section>
+
+    <!-- Book Now Section -->
+    <section class="mt-16 text-center fade-in">
+        <h2 class="text-3xl font-semibold">📅 Book Now</h2>
+        <p class="mt-2 text-gray-400">Reserve your event, DJ, or Airbnb stay with us.</p>
+
+        <div class="mt-6 text-lg space-y-3">
+            <p class="font-semibold">📞 Contact:</p>
+            <p class="text-gray-300">0748307857, 0790879823</p>
+
+            <p class="font-semibold">📷 Instagram:</p>
+            <a href="https://instagram.com/mystique_musical" target="_blank" class="text-blue-400">@mystique_musical</a>
+
+            <p class="font-semibold">🎵 TikTok:</p>
+            <a href="https://www.tiktok.com/@k_andy" target="_blank" class="text-blue-400">@k_andy</a>
+        </div>
+
+        <button class="mt-6 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg text-lg shadow-lg">
+            Book Now
+        </button>
+    </section>
+
+</body>
+</html>
