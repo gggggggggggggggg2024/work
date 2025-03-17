@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mystique Entertainment</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     <style>
-        /* Animations */
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Header Animation */
         .fade-in {
             opacity: 0;
             transform: translateY(-20px);
@@ -18,9 +25,50 @@
                 transform: translateY(0);
             }
         }
+
+        /* Card Hover Effect */
         .card:hover {
             transform: translateY(-5px);
             transition: 0.3s ease-in-out;
+        }
+
+        /* Backgrounds */
+        .drinks-section {
+            background: url('images/drinks.jpg') no-repeat center center/cover;
+            position: relative;
+            padding: 60px 20px;
+        }
+        .drinks-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .drinks-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+        }
+        
+        /* Menu Styles */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+        }
+        .menu-item ion-icon {
+            font-size: 1.8rem;
+            color: #facc15;
+        }
+        .drinks-section .menu-item ion-icon {
+            color: #38bdf8;
         }
     </style>
 </head>
@@ -68,25 +116,72 @@
 
     </section>
 
-    <!-- Book Now Section -->
+    <!-- 🍔 Food Menu -->
+    <section class="bg-gray-800 p-10 rounded-lg mt-16 text-center">
+        <h2 class="text-4xl font-semibold text-orange-400">🍔 Delicious Food Menu</h2>
+        <p class="mt-2 text-gray-300">Indulge in our chef’s special creations.</p>
+
+        <div class="max-w-4xl mx-auto mt-8 text-left">
+            <div class="menu-item">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                <span>Burger & Fries</span>
+                <span class="text-orange-400 font-semibold">KSHS 500/=</span>
+            </div>
+            <div class="menu-item">
+                <ion-icon name="pizza-outline"></ion-icon>
+                <span>Cheese Pizza</span>
+                <span class="text-orange-400 font-semibold">KSHS 700/=</span>
+            </div>
+            <div class="menu-item">
+                <ion-icon name="restaurant-outline"></ion-icon>
+                <span>Grilled Chicken</span>
+                <span class="text-orange-400 font-semibold">KSHS 900/=</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🍹 Drinks Menu -->
+    <section class="drinks-section mt-16">
+        <div class="drinks-content">
+            <h2 class="text-4xl font-semibold">🍹 Refreshing Drinks Menu</h2>
+            <p class="mt-2 text-gray-300">Sip on our handcrafted cocktails.</p>
+
+            <div class="max-w-4xl mx-auto mt-8 text-left">
+                <div class="menu-item">
+                    <ion-icon name="wine-outline"></ion-icon>
+                    <span>Long Island</span>
+                    <span class="text-blue-400 font-semibold">KSHS 900/=</span>
+                </div>
+                <div class="menu-item">
+                    <ion-icon name="beer-outline"></ion-icon>
+                    <span>Tequila Sunrise</span>
+                    <span class="text-blue-400 font-semibold">KSHS 800/=</span>
+                </div>
+                <div class="menu-item">
+                    <ion-icon name="cafe-outline"></ion-icon>
+                    <span>Sex on the Beach</span>
+                    <span class="text-blue-400 font-semibold">KSHS 700/=</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="mt-16 text-center fade-in">
-        <h2 class="text-3xl font-semibold">📅 Book Now</h2>
-        <p class="mt-2 text-gray-400">Reserve your event, DJ, or Airbnb stay with us.</p>
+        <h2 class="text-3xl font-semibold">📞 Contact Us</h2>
+        <p class="mt-2 text-gray-400">Get in touch for bookings and inquiries.</p>
 
         <div class="mt-6 text-lg space-y-3">
-            <p class="font-semibold">📞 Contact:</p>
-            <p class="text-gray-300">0748307857, 0790879823</p>
+            <p class="font-semibold">📞 Phone Numbers:</p>
+            <a href="tel:+254748307857" class="text-blue-400">0748307857</a><br>
+            <a href="tel:+254790879823" class="text-blue-400">0790879823</a>
 
             <p class="font-semibold">📷 Instagram:</p>
-            <a href="https://instagram.com/mystique_musical" target="_blank" class="text-blue-400">@mystique_musical</a>
+            <a href="https://instagram.com/mystique_musical" target="_blank" class="text-pink-400">@mystique_musical</a>
 
             <p class="font-semibold">🎵 TikTok:</p>
-            <a href="https://www.tiktok.com/@k_andy" target="_blank" class="text-blue-400">@k_andy</a>
+            <a href="https://www.tiktok.com/@k_andy" target="_blank" class="text-red-400">@k_andy</a>
         </div>
-
-        <button class="mt-6 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg text-lg shadow-lg">
-            Book Now
-        </button>
     </section>
 
 </body>
